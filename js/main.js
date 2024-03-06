@@ -45,6 +45,7 @@ const btnsx = document.getElementById("btnsx");
 const btndx = document.getElementById("btndx");
 
 let currentIndex = 0;
+let interval;
 
 
 // Carica le immagini nel carosello
@@ -114,4 +115,5 @@ function toggleActive(index) {
     thumbnails[index].classList.add('active');
 }
 
-
+// Avvia il ciclo di scorrimento automatico
+interval = setInterval(clickNext, 3000);
